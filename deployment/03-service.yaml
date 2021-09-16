@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-service
+  namespace: world-app
+spec:
+  selector:
+    app: hello
+
+  ports:
+    - name: application
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  type: ClusterIP
+
